@@ -55,6 +55,29 @@
         th {
             padding: 10px;
         }
+
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            /* Styling */
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+
+        }
+
+        #backToTopBtn:hover {
+
+            background-color: #0f0;
+
+        }
     </style>
 </head>
 
@@ -596,6 +619,31 @@
         </table>
     </section>
 
+    <button id="backToTopBtn">↑ Top</button>
+
+    <script>
+        // Get the button element
+        const backToTopBtn = document.getElementById('backToTopBtn');
+
+        // Listen for scroll events
+        window.addEventListener('scroll', () => {
+            // If scrolled down more than 200px, show the button; otherwise hide it
+            if (window.scrollY > 200) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+        // When the user clicks the button, scroll to the top of the document
+        backToTopBtn.addEventListener('click', () => {
+            // The scrollTo function moves the page to a specified coordinate.
+            // behavior: 'smooth' for a smooth scrolling effect
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 
 </html>
