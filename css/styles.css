@@ -1,0 +1,75 @@
+.header {
+    height: 166px;
+    background-color: #642086;
+    display: flex;
+    justify-content: space-between;
+    /* main axis */
+    align-items: center;
+    /* cross axis */
+    margin: -1px;
+}
+
+.contact-info {
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+
+}
+
+.top-nav-div {
+    float: right;
+    /* background-color: #fff; */
+}
+
+.top-nav-ul {
+    display: inline-block;
+}
+
+.links {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+
+}
+
+.links a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+.links a:hover {
+    color: #fff;
+    font-weight: bolder;
+}
+
+table {
+    width: 80%;
+}
+td,
+th {
+    padding: 10px;
+}
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    /* Styling */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+}
+
+#backToTopBtn:hover {
+
+    background-color: #0f0;
+
+}
